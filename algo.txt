@@ -1,0 +1,23 @@
+Algorithm to insert new node at any position of a circular linked list
+%%Input : head {Pointer to first node of the list}
+        N {Position where to insert}
+Begin
+    If (head == NULL) then
+        write ('List is empty')
+    End if
+    Else if (N == 1) then
+        insertAtBeginning()
+    End if
+    Else then
+        alloc (newNode)
+        read (data)
+        newNode.data ← data;
+        
+        current ← head;
+        For count ← 2 to N-1 do
+            current ← current.next;
+        End for
+        newNode.next ← current.next;
+        current.next ← newNode;
+    End if
+End
