@@ -1,0 +1,35 @@
+struct node{
+int data;
+struct node *next;
+}*new , *head , *tail ,*temp ; //they all will have data and link of the next node
+{
+new = (struct node *)malloc(sizeof(struct node))
+scanf("%d",&value);
+new --> data = value ;
+new --> next = NULL;
+if (head ==NULL)
+{
+head = new ; //bcz there is ony one node
+tail = new;
+
+}
+else
+{
+tail --> next = new ;
+tail = new 
+}
+else{
+tail --> next = new;
+tail = new;
+tail --> next =head //bcz it is a circular linked list
+}
+printf("press y to end and n to continue ");
+}while(ch ='y')
+//display
+temp =head;
+while(temp -> next != head)
+{
+printf("%d",temp -->data) //to display till n-1 node
+temp = temp --> next ;
+}
+printf("%d", temp --> data); //to display last node
